@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Rick and Morty</string>
+    <string name="residents">Residents</string>
+    <string name="favorites">Favorites</string>
+    <string name="properties">Properties</string>
+    <string name="species">Species</string>
+    <string name="location">Location</string>
+    <string name="whereabouts">Whereabouts</string>
+    <string name="origin">Origin</string>
+    <string name="gender">Gender</string>
+    <string name="no_favorites">There are no favourite items at this time</string>
+    <string name="no_locations">There are no items in the locations at this time</string>
+</resources>

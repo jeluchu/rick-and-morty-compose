@@ -1,0 +1,145 @@
+[versions]
+ktor="3.2.3"
+agp = "8.12.0"
+koin = "4.1.0"
+kotlin = "2.2.0"
+kotlinx = "1.10.2"
+ksp = "2.2.0-2.0.2"
+io-coil-kt = "3.3.0"
+androidx-room = "2.7.2"
+composeBom = "2025.07.00"
+androidx-lifecycle = "2.9.2"
+androidx-navigation = "2.9.3"
+kotlinx-serialization = "1.9.0"
+junit = "4.13.2"
+androidx-arch-core = "2.2.0"
+kotlinx-coroutines-test = "1.10.2"
+mockito-core = "5.18.0"
+mockito-kotlin = "6.0.0"
+kotlin-test = "1.9.10"
+turbine = "1.2.1"
+
+[libraries]
+
+# KOIN
+koin-core = { module = "io.insert-koin:koin-core", version.ref = "koin" }
+koin-android = { module = "io.insert-koin:koin-android", version.ref = "koin" }
+koin-compose = { module = "io.insert-koin:koin-androidx-compose", version.ref = "koin" }
+koin-coroutines = { module = "io.insert-koin:koin-core-coroutines", version.ref = "koin" }
+koin-navigation = { module = "io.insert-koin:koin-androidx-navigation", version.ref = "koin" }
+
+# KTOR
+ktor-client-cio = { module = "io.ktor:ktor-client-cio", version.ref = "ktor" }
+ktor-client-json = { module = "io.ktor:ktor-client-json", version.ref = "ktor" }
+ktor-client-core = { module = "io.ktor:ktor-client-core", version.ref = "ktor" }
+ktor-client-okhttp = { module = "io.ktor:ktor-client-okhttp", version.ref = "ktor" }
+ktor-client-logging = { module = "io.ktor:ktor-client-logging", version.ref = "ktor" }
+ktor-serialization-kotlinx-json = { module = "io.ktor:ktor-serialization-kotlinx-json", version.ref = "ktor" }
+ktor-serialization-content-negotiation = { module = "io.ktor:ktor-client-content-negotiation", version.ref = "ktor" }
+
+# KOTLIN
+org-jetbrains-kotlinx-kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinx" }
+org-jetbrains-kotlinx-kotlinx-coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "kotlinx" }
+kotlinx-serialization-json = { group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-json", version.ref = "kotlinx-serialization" }
+
+# COMPOSE
+compose-bom = { group = "androidx.compose", name ="compose-bom", version.ref = "composeBom" }
+compose-ui = { group = "androidx.compose.ui", name = "ui" }
+compose-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
+compose-material3 = { group = "androidx.compose.material3", name = "material3" }
+compose-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
+compose-runtime = { group = "androidx.compose.runtime", name = "runtime" }
+compose-animation = { group = "androidx.compose.animation", name = "animation" }
+compose-foundation = { group = "androidx.compose.foundation", name = "foundation" }
+compose-foundation-layout = { group = "androidx.compose.foundation", name = "foundation-layout" }
+
+# ANDROIDX
+androidx-core-core-ktx = "androidx.core:core-ktx:1.16.0"
+androidx-lifecycle-lifecycle-runtime-compose = { module = "androidx.lifecycle:lifecycle-runtime-compose", version.ref = "androidx-lifecycle" }
+androidx-lifecycle-lifecycle-viewmodel-compose = { module = "androidx.lifecycle:lifecycle-viewmodel-compose", version.ref = "androidx-lifecycle" }
+androidx-navigation-navigation-compose = { module = "androidx.navigation:navigation-compose", version.ref = "androidx-navigation" }
+androidx-room-compiler = { module = "androidx.room:room-compiler", version.ref = "androidx-room" }
+androidx-room-ktx = { module = "androidx.room:room-ktx", version.ref = "androidx-room" }
+androidx-room-runtime = { module = "androidx.room:room-runtime", version.ref = "androidx-room" }
+androidx-datastore = "androidx.datastore:datastore-preferences:1.1.7"
+
+# COIL
+coil-compose = { module = "io.coil-kt.coil3:coil-compose", version.ref = "io-coil-kt" }
+coil-compose-ktor = { module = "io.coil-kt.coil3:coil-network-ktor3", version.ref = "io-coil-kt" }
+
+# FOR TESTING
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+androidx-arch-core-testing = { group = "androidx.arch.core", name = "core-testing", version.ref = "androidx-arch-core" }
+kotlinx-coroutines-test = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-test", version.ref = "kotlinx-coroutines-test" }
+mockito-core = { group = "org.mockito", name = "mockito-core", version.ref = "mockito-core" }
+mockito-kotlin = { group = "org.mockito.kotlin", name = "mockito-kotlin", version.ref = "mockito-kotlin" }
+kotlin-test = { group = "org.jetbrains.kotlin", name = "kotlin-test", version.ref = "kotlin-test" }
+turbine = { group = "app.cash.turbine", name = "turbine", version.ref = "turbine" }
+
+[plugins]
+google-ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
+android-application = { id = "com.android.application", version.ref = "agp" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+jetbrains-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
+
+[bundles]
+
+ktor = [
+    "ktor-client-cio",
+    "ktor-client-core",
+    "ktor-client-json",
+    "ktor-client-okhttp",
+    "ktor-client-logging",
+    "ktor-serialization-kotlinx-json",
+    "ktor-serialization-content-negotiation",
+]
+
+koin = [
+    "koin-core",
+    "koin-android",
+    "koin-compose",
+    "koin-coroutines",
+    "koin-navigation",
+]
+
+kotlin = [
+    "org-jetbrains-kotlinx-kotlinx-coroutines-android",
+    "org-jetbrains-kotlinx-kotlinx-coroutines-core",
+    "kotlinx-serialization-json"
+]
+
+androidx = [
+    "androidx-room-ktx",
+    "androidx-datastore",
+    "androidx-room-runtime",
+    "androidx-core-core-ktx",
+    "androidx-navigation-navigation-compose",
+    "androidx-lifecycle-lifecycle-runtime-compose",
+    "androidx-lifecycle-lifecycle-viewmodel-compose",
+]
+
+compose-bom = [
+    "compose-ui",
+    "compose-runtime",
+    "compose-ui-tooling",
+    "compose-material3",
+    "compose-animation",
+    "compose-foundation",
+    "compose-foundation-layout"
+]
+
+coil = [
+    "coil-compose",
+    "coil-compose-ktor"
+]
+
+test = [
+    "junit",
+    "androidx-arch-core-testing",
+    "kotlinx-coroutines-test",
+    "mockito-core",
+    "mockito-kotlin",
+    "kotlin-test",
+    "turbine"
+]
