@@ -89,6 +89,10 @@ If you have opened the app for the first time and data about the characters/loca
 
 I have used the Room database library for Cache and Favourites, so we will have two databases that will help us manage both things.
 
+# GitHub Actions
+
+A GitHub Action is included to generate a debug APK in the application so that it can be tested. The app has two flavours (debug and release), but in order to avoid generating signed APKs, only the development version is generated.
+
 # Future improvements
 
 Many improvements could be made to this app, such as including a character/location **search engine**, a button to **change the style of the items in the list**, or even **adding a custom splash screen**.
