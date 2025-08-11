@@ -17,8 +17,7 @@ Here is the app design. It is a simple app that, when launched, displays a list 
 # Video recording
 Here is the animation from the menu below. Although I have never seen this series, I have seen that there is a pickle, and I wanted the menu to look like that (as far as I can tell, it is called Pickle Rick).
 
-https://github.com/jeluchu/rick-and-morty-compose/raw/refs/heads/develop/assets/Screen_recording_20250811_182119.webm
-
+https://github.com/jeluchu/rick-and-morty-compose/raw/refs/heads/main/assets/Screen_recording_20250811_182119.mp4
 
 ## Prerequisites
 
